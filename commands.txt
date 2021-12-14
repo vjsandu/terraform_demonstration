@@ -1,0 +1,7 @@
+# To set Access Key and Secret Key
+
+$env:TF_VAR_aws_access_key="AKIAY2FER7EZSETW7WI5"
+$env:TF_VAR_aws_secret_key="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"
+
+$env:AWS_ACCESS_KEY_ID=""
+$env:AWS_SECRET_ACCESS_KEY=""

@@ -1,13 +1,3 @@
-#########
-# Providers
-#########
-
-provider "aws" {
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
-  region     = var.aws_region
-}
-
 ########
 # DATA
 ########
@@ -101,7 +91,7 @@ resource "aws_security_group" "alb_sg" {
 # Nginx Security Groups
 
 resource "aws_security_group" "nginx-sg" {
-  name = "nginx_sg"
+  name   = "nginx_sg"
   vpc_id = aws_vpc.vpc.id
 
   # HTTP access from anywhere
