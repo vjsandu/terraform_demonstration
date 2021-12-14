@@ -22,7 +22,7 @@ aws s3 cp s3://${aws_s3_bucket.web_bucket.id}/website/index.html /home/ec2-user/
 aws s3 cp s3://${aws_s3_bucket.web_bucket.id}/website/panther.png /home/ec2-user/panther.png
 sudo rm /usr/share/nginx/html/index.html
 sudo cp /home/ec2-user/index.html /usr/share/nginx/html/index.html
-sudo cp /home/ec2-user/Globo_logo_Vert.png /usr/share/nginx/html/panther.png
+sudo cp /home/ec2-user/panther.png /usr/share/nginx/html/panther.png
 EOF
 
   tags = local.common_tags
@@ -45,7 +45,7 @@ aws s3 cp s3://${aws_s3_bucket.web_bucket.id}/website/index.html /home/ec2-user/
 aws s3 cp s3://${aws_s3_bucket.web_bucket.id}/website/panther.png /home/ec2-user/panther.png
 sudo rm /usr/share/nginx/html/index.html
 sudo cp /home/ec2-user/index.html /usr/share/nginx/html/index.html
-sudo cp /home/ec2-user/Globo_logo_Vert.png /usr/share/nginx/html/panther.png
+sudo cp /home/ec2-user/panther.png /usr/share/nginx/html/panther.png
 EOF
 
   tags = local.common_tags
