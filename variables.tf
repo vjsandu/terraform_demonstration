@@ -1,13 +1,7 @@
-variable "aws_access_key" {
+variable "naming_prefix" {
   type        = string
-  description = "AWS Access Key"
-  sensitive   = true
-}
-
-variable "aws_secret_key" {
-  type        = string
-  description = "AWS Secret Key"
-  sensitive   = true
+  description = "Name Prefix to all Resources"
+  default     = "pilot"
 }
 
 variable "aws_region" {
@@ -28,6 +22,12 @@ variable "vpc_cidr_block" {
   default     = "10.0.0.0/16"
 }
 
+variable "vpc_subnet_count" {
+  type        = number
+  description = "Number of Subnets to create"
+  default     = 2
+}
+
 variable "vpc_subnets_cidr_blocks" {
   type        = list(string)
   description = "CIDR Blocks for Subnets in VPC"
@@ -44,6 +44,12 @@ variable "instance_type" {
   type        = string
   description = "Type for EC2 Instance"
   default     = "t2.micro"
+}
+
+variable "instance_count" {
+  type        = number
+  description = "Number of instances to create in VPC"
+  default     = 2
 }
 
 variable "company" {
